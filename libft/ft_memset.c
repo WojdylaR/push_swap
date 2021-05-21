@@ -21,6 +21,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	i = 0;
 	while (len > i)
 	{
+		ft_putstr_fd("Hello\n", 1);
 		str[i] = c;
 		i++;
 	}

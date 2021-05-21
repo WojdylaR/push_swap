@@ -22,9 +22,12 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
+%.o: %.c $(HEADER)
+	gcc $(FLAGS) -c $< -o $@
+
 $(NAME): $(OBJS) $(HEADER)
 	$(MAKE) -C libft
-	$(CC) $(HEADER) $(FLAGS) $(OBJS) $(LIBFT) -o ${NAME}
+	$(CC) $(OBJS) $(HEADER) $(FLAGS) $(LIBFT)
 
 clean:
 	rm -f $(OBJS)
@@ -36,4 +39,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: fclean re norme all clean
+.PHONY: fclean re all clean
