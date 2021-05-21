@@ -1,17 +1,34 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include "../libft/libft.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <sys/types.h>
 # include <sys/stat.h>
 
-typedef struct s_list
+typedef struct s_lst
 {
     int *list_a;
     int *list_b;
-    int size_list;
-}               t_list;
+    int size_max;
+    int size_a;
+    int size_b;
+}               t_lst;
+
+int     fill_tab(int argc, char **argv, t_lst *lst);
+void    ERROR(int i);
+void    ft_sa(t_lst *lst);
+void    ft_sb(t_lst *lst);
+void    ft_ss(t_lst *lst);
+void    ft_pa(t_lst *lst);
+void    ft_pb(t_lst *lst);
+void    ft_ra(t_lst *lst);
+void    ft_rb(t_lst *lst);
+void    ft_rr(t_lst *lst);
+void    ft_rra(t_lst *lst);
+void    ft_rrb(t_lst *lst);
+void    ft_rrr(t_lst *lst);
 
 #endif 
