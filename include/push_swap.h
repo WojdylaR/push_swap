@@ -8,6 +8,9 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 
+# define A lst->list_a
+# define B lst->list_b
+
 typedef struct s_lst
 {
     int *list_a;
@@ -15,6 +18,18 @@ typedef struct s_lst
     int size_max;
     int size_a;
     int size_b;
+    int nsa;
+    int nsb;
+    int nss;
+    int npa;
+    int npb;
+    int nra;
+    int nrb;
+    int nrr;
+    int nrra;
+    int nrrb;
+    int nrrr;
+
 }               t_lst;
 
 int     fill_tab(int argc, char **argv, t_lst *lst);
@@ -30,5 +45,6 @@ void    ft_rr(t_lst *lst);
 void    ft_rra(t_lst *lst);
 void    ft_rrb(t_lst *lst);
 void    ft_rrr(t_lst *lst);
+void    ft_sort(t_lst *lst);
 
 #endif 

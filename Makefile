@@ -8,13 +8,14 @@ LIBFT = libft/libft.a
 
 HEADER = include/push_swap.h
 
-SRCS =	src/checker.c \
+SRCS =	src/push_swap.c \
 		src/init_tab.c \
 		src/error.c \
 		src/ft_s.c \
 		src/ft_p.c \
 		src/ft_r.c \
-		src/ft_rr.c
+		src/ft_rr.c \
+		src/sort_lst.c
 
 
 OBJS = $(SRCS:.c=.o)

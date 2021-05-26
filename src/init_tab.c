@@ -1,10 +1,26 @@
 #include "../include/push_swap.h"
 
+void	init_var(t_lst *lst)
+{
+	lst->npb = 0;
+	lst->npa = 0;
+	lst->nsa = 0;
+	lst->nsb = 0;
+	lst->nss = 0;
+	lst->nra = 0;
+	lst->nrb = 0;
+	lst->nrr = 0;
+	lst->nrra = 0;
+	lst->nrrb = 0;
+	lst->nrrr = 0;
+}
+
 int    init_lst(int argc, t_lst *lst)
 {
     int x;
 
     x = - 1;
+    init_var(lst);
     lst->size_max = argc - 1;
     if (!(lst->list_a = malloc(sizeof(int) * lst->size_max)))
        return (-1);
