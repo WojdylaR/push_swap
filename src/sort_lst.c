@@ -43,19 +43,28 @@ void	ft_sort_three(t_lst *lst)
 
 void	ft_sort_fo_fi(t_lst *lst)
 {
-	while (lst->size_a >= 3)
+	while (lst->size_a > 3 )
 		ft_pb(lst);
 	while (ft_check_lst(A, lst->size_a) == -1 && ft_check_lst(B, lst->size_b == -1))
 	{
 		ft_sort_three(lst);
-		if (B[1] && B[1] < B[0])
-		{
-			if (lst->nbrr == 1)
-				lst->nbrr++;
-			else if (lst->nbr == 1)
-				lst->nbrrr++;
+		if (B[1] && B[1] > B[0])
 			ft_rb(lst);
+	}
+	while (ft_check_lst(A, lst->size_max) == -1 && lst->size_a != lst->size_max)
+	{
+		if (B[0] < A[2] && B[0] > A[1])
+		{
+			ft_ra(lst);
+			ft_pa(lst);
+			ft_sa(lst);
+			ft_rra(lst);
 		}
+		ft_pa(lst);
+		if (A[0] > A[1] && A[0] < A[lst->size_a - 1])
+			ft_sa(lst);
+		if (A[0] > A[lst->size_a - 1])
+			ft_ra(lst);
 	}
 }
 
