@@ -6,12 +6,11 @@
 /*   By: rwojdyla <rwojdyla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 16:06:45 by rwojdyla          #+#    #+#             */
-/*   Updated: 2021/05/26 19:06:45 by rwojdyla         ###   ########.fr       */
+/*   Updated: 2021/05/27 18:21:45 by rwojdyla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <stdlib.h>
 
 int		ft_check_lst(int *lst, int size)
 {
@@ -85,4 +84,6 @@ void    ft_sort(t_lst *lst)
 {
 	if (lst->size_max <= 5)
 		ft_sort_little_lst(lst);
+	else
+		big_sort(lst);
 }

@@ -15,7 +15,9 @@ SRCS =	src/push_swap.c \
 		src/ft_p.c \
 		src/ft_r.c \
 		src/ft_rr.c \
-		src/sort_lst.c
+		src/sort_lst.c \
+		src/sort_sort_s.c \
+		src/big_sort.c
 
 
 OBJS = $(SRCS:.c=.o)
@@ -28,7 +30,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(HEADER)
 	$(MAKE) -C libft
-	$(CC) $(OBJS) $(HEADER) $(FLAGS) $(LIBFT) -o $(NAME)
+	$(CC) $(OBJS) $(HEADER) $(FLAGS) $(LIBFT)
 
 clean:
 	rm -f $(OBJS)
