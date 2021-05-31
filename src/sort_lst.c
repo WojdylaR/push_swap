@@ -82,8 +82,11 @@ void	ft_sort_little_lst(t_lst *lst)
 
 void    ft_sort(t_lst *lst)
 {
-	if (lst->size_max <= 5)
-		ft_sort_little_lst(lst);
-	else
-		big_sort(lst);
+	if (ft_check_lst(A, lst->size_a) == -1)
+	{
+		if (lst->size_max <= 5)
+			ft_sort_little_lst(lst);
+		else
+			big_sort(lst);
+	}
 }

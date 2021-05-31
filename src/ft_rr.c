@@ -13,6 +13,7 @@ void    ft_rra(t_lst *lst)
         x--;
     }
     lst->list_a[x] = t;
+    ft_putstr_fd("rra\n", 1);
 }
 
 void    ft_rrb(t_lst *lst)
@@ -28,10 +29,12 @@ void    ft_rrb(t_lst *lst)
         x--;
     }
     lst->list_b[x] = t;
+    ft_putstr_fd("rrb\n", 1);
 }
 
 void    ft_rrr(t_lst *lst)
 {
     ft_rrb(lst);
     ft_rra(lst);
+    ft_putstr_fd("rrr\n", 1);
 }

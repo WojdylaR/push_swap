@@ -23,6 +23,7 @@ void    ft_pa(t_lst *lst)
         lst->size_b--;
         lst->size_a++;
     }
+    ft_putstr_fd("pa\n", 1);
 }
 
 void    ft_pb(t_lst *lst)
@@ -48,4 +49,5 @@ void    ft_pb(t_lst *lst)
         lst->size_b++;
         lst->size_a--;
     }
+    ft_putstr_fd("pb\n", 1);
 }

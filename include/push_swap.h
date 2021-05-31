@@ -16,7 +16,7 @@ typedef struct s_lst
 {
     int		*list_a;
     int		*list_b;
-    int     *list_s;
+    long long int     *list_s;
     int		size_max;
     int		size_a;
     int		size_b;
@@ -27,7 +27,7 @@ typedef struct s_lst
 }               t_lst;
 
 int     fill_tab(int argc, char **argv, t_lst *lst);
-void    ERROR(int i);
+void    error_f(t_lst *lst, int i);
 void    ft_sa(t_lst *lst);
 void    ft_sb(t_lst *lst);
 void    ft_ss(t_lst *lst);
