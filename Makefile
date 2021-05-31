@@ -2,7 +2,7 @@ NAME = push_swap
 
 FLAGS = -Wall -Wextra -Werror
 
-CC = gcc
+CC = gcc #-g3 -fsanitize=address
 
 LIBFT = libft/libft.a
 

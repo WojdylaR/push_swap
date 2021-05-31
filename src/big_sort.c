@@ -6,7 +6,7 @@
 /*   By: rwojdyla <rwojdyla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:44:30 by rwojdyla          #+#    #+#             */
-/*   Updated: 2021/05/28 18:03:15 by rwojdyla         ###   ########.fr       */
+/*   Updated: 2021/05/31 17:50:51 by rwojdyla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,11 @@ void	check_chunck(t_lst *lst)
 
 void push_to_a(t_lst *lst)
 {
+	int y = 0;
 	int x;
 
+	ft_putstr_fd("size maxx = ", 1);
+	ft_putnbr_fd(lst->size_max, 1);
 	x = 0;
 	while (lst->size_b > 0)
 	{
@@ -52,7 +55,18 @@ void push_to_a(t_lst *lst)
 		if (x > lst->size_b / 2)
 			while (S[lst->size_max - 1] != B[0])
 			{
-				ft_putnbr_fd(S[lst->size_max - 1], 1);
+				sleep(1);
+				y = 0;
+				while (S[y])
+				{
+					ft_putstr_fd("\ns[x] = ", 1);
+					ft_putnbr_fd(S[0], 1);
+					y++;
+				}
+				ft_putnbr_fd(S[lst->size_max], 1);
+				ft_putstr_fd("\n ", 1);
+				ft_putnbr_fd(B[0], 1);
+				ft_putstr_fd("\n", 1);
 				ft_rrb(lst);
 			}
 		else
@@ -79,7 +93,6 @@ void	big_sort(t_lst *lst)
 		else
 			while (++x < lst->hold_s)
 				ft_rra(lst);
-
 		ft_pb(lst);
 		if (lst->size_max - lst->size_a > lst->rchunck * (lst->nchunck +1))
 			lst->nchunck++;
