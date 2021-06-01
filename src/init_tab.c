@@ -2,9 +2,6 @@
 
 int    init_lst(int argc, t_lst *lst)
 {
-    int x;
-
-    x = - 1;
     lst->size_max = argc - 1;
     if (!(lst->list_a = malloc(sizeof(int) * lst->size_max)))
        return (-1);
@@ -17,7 +14,7 @@ int    init_lst(int argc, t_lst *lst)
     ft_bzero(lst->list_s, lst->size_max);
     lst->size_a = argc - 1;
     lst->size_b = 0;
-    lst->rchunck = 9;
+    lst->rchunck = 49;
     return(0);
 }
 
@@ -45,6 +42,15 @@ int     fill_tab(int argc, char **argv, t_lst *lst)
         ft_putstr_fd(" ", 1);
         x++;
     }
+        /*int n = 0;
+        while (n < lst->size_max)
+        {
+            ft_putstr_fd("S[x] = ", 1);
+            dprintf(1, "%lli", S[n]);
+            ft_putstr_fd("\n", 1);
+            n++;
+        } */
+        //ft_putstr_fd("\n", 1);
     sort_sort_s(lst);
     return (0);
 }

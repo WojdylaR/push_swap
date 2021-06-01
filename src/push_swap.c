@@ -7,8 +7,8 @@ int     main(int argc, char **argv)
 		return (-1);
 	fill_tab(argc, argv, lst);
 	ft_sort(lst);
-	int x = -1;
-	ft_putstr_fd("\n\n\n", 1);
-	while (x++ < argc - 2)
-		printf("list_a[%i] = %i, list_b[%i] = %i\n", x, lst->list_a[x], x, lst->list_b[x]);
+	//int x = -1;
+	//ft_putstr_fd("\n\n\n", 1);
+	/*while (x++ < argc - 2)
+		printf("list_a[%i] = %i, list_b[%i] = %i\n", x, lst->list_a[x], x, lst->list_b[x]);*/
 }
