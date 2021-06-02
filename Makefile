@@ -30,7 +30,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(HEADER)
 	$(MAKE) -C libft
-	$(CC) $(OBJS) $(HEADER) $(FLAGS) $(LIBFT) -o $(NAME)
+	$(CC) $(OBJS) -I $(HEADER) $(FLAGS) $(LIBFT) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)

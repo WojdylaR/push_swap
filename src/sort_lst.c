@@ -6,15 +6,15 @@
 /*   By: rwojdyla <rwojdyla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 16:06:45 by rwojdyla          #+#    #+#             */
-/*   Updated: 2021/05/31 15:57:12 by rwojdyla         ###   ########.fr       */
+/*   Updated: 2021/06/02 20:29:30 by rwojdyla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int		ft_check_lst(int *lst, int size)
+int	ft_check_lst(int *lst, int size)
 {
-	int x;
+	int	x;
 
 	x = 0;
 	while (x < size - 1)
@@ -42,29 +42,18 @@ void	ft_sort_three(t_lst *lst)
 
 void	ft_sort_fo_fi(t_lst *lst)
 {
-	while (lst->size_a > 3 )
+	while (lst->size_a > 3)
 		ft_pb(lst);
-	while (ft_check_lst(A, lst->size_a) == -1 && ft_check_lst(B, lst->size_b == -1))
+	while (ft_check_lst(A, lst->size_a) == -1
+		&& ft_check_lst(B, lst->size_b == -1))
 	{
 		ft_sort_three(lst);
 		if (B[1] && B[1] > B[0])
 			ft_rb(lst);
 	}
-	while (ft_check_lst(A, lst->size_max) == -1 && lst->size_a != lst->size_max)
-	{
-		if (B[0] < A[2] && B[0] > A[1])
-		{
-			ft_ra(lst);
-			ft_pa(lst);
-			ft_sa(lst);
-			ft_rra(lst);
-		}
-		ft_pa(lst);
-		if (A[0] > A[1] && A[0] < A[lst->size_a - 1])
-			ft_sa(lst);
-		if (A[0] > A[lst->size_a - 1])
-			ft_ra(lst);
-	}
+	push_to_a(lst);
+	while (ft_check_lst(A, lst->size_a) == -1)
+		ft_rra(lst);
 }
 
 void	ft_sort_little_lst(t_lst *lst)
@@ -80,7 +69,7 @@ void	ft_sort_little_lst(t_lst *lst)
 		ft_sort_fo_fi(lst);
 }
 
-void    ft_sort(t_lst *lst)
+void	ft_sort(t_lst *lst)
 {
 	if (ft_check_lst(A, lst->size_a) == -1)
 	{

@@ -42,5 +42,6 @@ void    ft_rrr(t_lst *lst);
 void    ft_sort(t_lst *lst);
 void    sort_sort_s(t_lst *lst);
 void    big_sort(t_lst *lst);
+void    push_to_a(t_lst *lst);
     
 #endif 
